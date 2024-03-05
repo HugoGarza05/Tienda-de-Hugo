@@ -1,0 +1,339 @@
+@keyframes neonGlow {
+    from {
+        box-shadow: 0 0 5px 2px rgba(128, 0, 128, 0.5), 0 0 10px 5px rgba(128, 0, 128, 0.5), 0 0 15px 7px rgba(128, 0, 128, 0.5);
+    }
+    to {
+        box-shadow: 0 0 10px 5px rgba(128, 0, 128, 0.5), 0 0 15px 7px rgba(128, 0, 128, 0.5), 0 0 20px 10px rgba(128, 0, 128, 0.5);
+    }
+}
+
+@keyframes neonReflection {
+    from {
+        transform: scaleY(1) rotateX(0deg);
+        background: radial-gradient(ellipse at center, rgba(128, 0, 128, 0.2) 0%, rgba(128, 0, 128, 0) 80%);
+    }
+    to {
+        transform: scaleY(0.5) rotateX(180deg);
+        background: radial-gradient(ellipse at center, rgba(128, 0, 128, 0.1) 0%, rgba(128, 0, 128, 0) 80%);
+    }
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #c4c3ca;
+    background-color: #080808;
+    overflow: hidden;
+}
+
+a {
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.link {
+    color: #fffbfb;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    color: #ffeba7;
+    font-size: 7vw;
+    margin-bottom: 20px;
+}
+h1.link {
+    margin-top: -400px; /* Adjust the margin-top as needed */
+}
+.card-3d-wrap {
+    position: relative;
+    width: 100%; /* Adjust the width as needed */
+    max-width: 400px; /* Set a maximum width for the card */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 60px auto; /* Center the card vertically and horizontally */
+    perspective: 800px;
+}
+
+.card-3d-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 600ms ease-out;
+}
+
+.card-front {
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0e;
+    position: relative;
+    border-radius: 9px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px; /* Adjust the max-width as needed */
+    max-height: 200px;
+    margin: 0 auto;
+    padding-bottom: 535px; /* Add padding to provide space inside the card */
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.center-wrap {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    display: block;
+    text-align: center;
+    padding: 0 15px; /* Adjust the padding as needed */
+}
+
+.form-group {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.form-style {
+    padding: 13px 20px;
+    padding-left: 55px;
+    height: 48px;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color: #c4c3ca;
+    background-color: #1f2029;
+    border: none;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
+}
+
+.form-style:focus,
+.form-style:active {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+}
+
+.input-icon {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: left;
+    color: #ffeba7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input:-ms-input-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input::-moz-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input:-moz-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input::-webkit-input-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input:focus:-ms-input-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input:focus::-moz-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input:focus:-moz-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.btn {
+    border-radius: 4px;
+    height: 44px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    border: none;
+    background-color: #ffeba7;
+    color: #7d04b4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active,
+
+.btn:hover {
+    background-color: #7d04b4;
+    color: #ffffff;
+    box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2);
+}
+/* Your existing styles here */
+
+.item {
+    width: 100%;
+    text-align: center;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 24px; /* Adjust the button width */
+    height: 24px; /* Adjust the button height */
+    font-size: 12px; /* Adjust the font size */
+    margin: 5px; /* Add margin for spacing between buttons */
+    transition: transform 0.3s ease-in-out;
+}
+
+.section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Additional styles for the fixed items */
+.item h4,
+.item p {
+    margin: 5px 0;
+}
+
+.item h4 {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.item p {
+    color: #ffffff;
+    font-size: 14px;
+}
+.price {
+    font-size: 18px; /* Adjust the price font size */
+}
+.total {
+    text-align: center;
+    margin-top: 0px;
+    color: #c4c3ca;
+    font-size: 22px; /* Adjust the total font size */
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.neon-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    pointer-events: none;
+    border-radius: 9px; /* Match the border-radius of your card */
+}
+.neon-reflection {
+    position: absolute;
+    bottom: -70px; /* Adjust the distance of the reflection from the card */
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust the height of the reflection */
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(128, 0, 128, 0.1) 0%, rgba(128, 0, 128, 0) 80%);
+    animation: neonReflection 3.5s ease-in-out infinite alternate;
+}
+
+.glow {
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
