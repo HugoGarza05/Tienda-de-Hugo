@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Tienda Hugo</title>
+</head>
+<body>
+    
+    <div class="center-wrap">
+        <h1 class="link">Tienda Hugo</h1>
+        
+        <div class="card-3d-wrap">
+            <div class="card-3d-wrapper">
+                <div class="card-front">
+                    <div class="item" data-price="1">
+                        <h4>Gansito</h4>
+                        <p>Price: $1</p>
+                        <div class="quantity">
+                            <button class="btn decrease" onclick="changeQuantity(this, -1)">-</button>
+                            <span>0</span>
+                            <button class="btn increase" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="item" data-price="2">
+                        <h4>Uncrustables</h4>
+                        <p>Price: $2</p>
+                        <div class="quantity">
+                            <button class="btn decrease" onclick="changeQuantity(this, -1)">-</button>
+                            <span>0</span>
+                            <button class="btn increase" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="item" data-price="2">
+                        <h4>Cheetos</h4>
+                        <p>Price: $2</p>
+                        <div class="quantity">
+                            <button class="btn decrease" onclick="changeQuantity(this, -1)">-</button>
+                            <span>0</span>
+                            <button class="btn increase" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="item" data-price="4">
+                        <h4>Takis</h4>
+                        <p>Price: $4</p>
+                        <div class="quantity">
+                            <button class="btn decrease" onclick="changeQuantity(this, -1)">-</button>
+                            <span>0</span>
+                            <button class="btn increase" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <p>Total Price: <span id="totalPrice">0</span></p>
+                    </div>
+                    <div class="neon-reflection"></div>
+                    <div class="neon-border glow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
